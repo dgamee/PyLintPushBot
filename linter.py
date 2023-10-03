@@ -4,7 +4,7 @@ import argparse
 import importlib
 from dotenv import load_dotenv
 
-REQUIRED_PACKAGES = ["black", "GitPython"]
+REQUIRED_PACKAGES = ["autopep8", "GitPython"]
 
 def install_required_packages():
     for package in REQUIRED_PACKAGES:
@@ -35,7 +35,7 @@ def main():
 
     # Format Python files using Black
     for python_file in python_files:
-        subprocess.check_call(["black", python_file])
+        subprocess.check_call(["autopep8", "--in-place", "--aggressive", python_file])
 
     # Commit and push changes to the repository
     try:
@@ -48,7 +48,7 @@ def main():
     
     for python_file in python_files:
         repo.git.add(python_file)
-    repo.git.commit("-m", "Auto-format using black")
+    repo.git.commit("-m", "Auto-format using autopep8")
     repo.remotes.origin.push()
     
     print("Linting and pushing to GitHub completed.")

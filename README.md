@@ -1,6 +1,6 @@
 # PyLintPushBot
 
-PyLintPushBot is a Python utility that automates the process of linting and pushing Python code to a GitHub repository. It utilizes the Black code formatter for auto-formatting Python files and GitPython for handling Git operations. This tool is designed to streamline code quality maintenance in your GitHub projects.
+PyLintPushBot is a Python utility that automates the process of linting and pushing Python code to a GitHub repository. It utilizes the `autopep8` code formatter for auto-formatting Python files and GitPython for handling Git operations. This tool is designed to streamline code quality maintenance in your GitHub projects.
 
 ## Table of Contents
 
