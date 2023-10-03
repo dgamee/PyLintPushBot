@@ -33,10 +33,14 @@ To maintain a clean and isolated development environment, it is recommended to s
     ```bash
     cd PyLintPushBot
 3. Create a virtual environment (optional but recommended):
+    - ### Windows:
+      ```bash
+      python -m venv .venv
+      ```
 
-    ```bash
-    python -m venv .venv
-    ```
+    - ### Linux/macOS:
+     ```shell
+    python3 -m venv .venv
 4. Activate the virtual environment:
     - ### Windows:
       ```shell
@@ -55,7 +59,7 @@ To maintain a clean and isolated development environment, it is recommended to s
 Before running PyLintPushBot, you need to configure the necessary environment variables in a `.env `file. Create a ``.env`` file in the project root directory and add the following information:
 
 ```shell
-REPO_PATH=/path/to/your/repo
+REPO_PATH=/path/to/your/repo (get it by typing pwd in your terminal)
 GITHUB_USERNAME=your_username
 GITHUB_TOKEN=your_personal_access_token
 ```
